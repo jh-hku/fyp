@@ -8,9 +8,9 @@ export default function Login({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.inputView} >
-        <Input placeholder='Username' style={styles.input} underlineColorAndroid="transparent"/>
-        <Input placeholder='Password' style={styles.input} secureTextEntry={true} underlineColorAndroid="transparent"/>
-        <Input placeholder='Re-enter Password' style={styles.input} secureTextEntry={true} underlineColorAndroid="transparent"/>
+        <Input placeholder='Username' style={styles.input} inputContainerStyle={{borderBottomWidth: 0}}/>
+        <Input placeholder='Password' style={styles.input} secureTextEntry={true} inputContainerStyle={{borderBottomWidth: 0}}/>
+        <Input placeholder='Re-enter Password' style={styles.input} secureTextEntry={true} inputContainerStyle={{borderBottomWidth: 0}}/>
       </View>
       
       <Button title="Signup" buttonStyle={styles.button} />

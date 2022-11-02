@@ -8,8 +8,8 @@ export default function Login({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.inputView} >
-        <Input placeholder='Username' style={styles.input} />
-        <Input placeholder='Password' style={styles.input} secureTextEntry={true} />
+        <Input placeholder='Username' style={styles.input} inputContainerStyle={{borderBottomWidth: 0}}/>
+        <Input placeholder='Password' style={styles.input} secureTextEntry={true} inputContainerStyle={{borderBottomWidth: 0}}/>
       </View>
       
       <Button title="Login" buttonStyle={styles.button} />
