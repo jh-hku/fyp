@@ -1,3 +1,4 @@
+import { Button } from '@rneui/base';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 
