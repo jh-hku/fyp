@@ -12,7 +12,9 @@ export default function Login({navigation}) {
         <Input placeholder='Password' style={styles.input} secureTextEntry={true} inputContainerStyle={{borderBottomWidth: 0}}/>
       </View>
       
-      <Button title="Login" buttonStyle={styles.button} />
+      <Button title="Login" buttonStyle={styles.button} 
+        onPress={() => navigation.replace("Home")}
+      />
       <Button 
         title="Don't have an account? Signup today!" 
         buttonStyle={styles.button} 

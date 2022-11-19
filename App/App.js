@@ -18,9 +18,9 @@ export default function App() {
     return (
         <NavigationContainer> 
           <Stack.Navigator screenOptions={{ animation: 'none' }}>
-            <Stack.Screen name="Home" component={Home}  />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Signup" component={Signup}  />
+            <Stack.Screen name="Home" component={Home}  />
             <Stack.Screen name="Genetics" component={Genetics} />
             <Stack.Screen name="Risk" component={Risk}  />
             <Stack.Screen name="Community" component={Community} />

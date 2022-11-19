@@ -13,7 +13,9 @@ export default function Login({navigation}) {
         <Input placeholder='Re-enter Password' style={styles.input} secureTextEntry={true} inputContainerStyle={{borderBottomWidth: 0}}/>
       </View>
       
-      <Button title="Signup" buttonStyle={styles.button} />
+      <Button title="Signup" buttonStyle={styles.button} 
+        onPress={() => navigation.replace("Login")}
+      />
       <Button 
         title="Have an account? Login instead!" 
         buttonStyle={styles.button} 
