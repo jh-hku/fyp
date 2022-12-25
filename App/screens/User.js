@@ -6,7 +6,7 @@ import { Container, Icon, ScreenContainer, Touchable, withTheme } from '@draftbi
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import BotNavbar from '../components/BotNavbar';
 
-export default function User({ navigation: { goBack } }) {
+export default function User({ navigation }) {
     return (
         <ScreenContainer
             style={styles.screenContainer}
@@ -37,7 +37,7 @@ export default function User({ navigation: { goBack } }) {
                     type="outline" />
             </Container>
             <Container useThemeGutterPadding={true} elevation={0}>
-                <Touchable style={styles.touchableFirst}>
+                <Touchable style={styles.touchableFirst} onPress={() => navigation.push("HealthDetails")} >
                     <View style={styles.view}>
                         <Text style={styles.optionText}> Health Details </Text>
                     {/* <Icon
@@ -48,7 +48,7 @@ export default function User({ navigation: { goBack } }) {
                     /> */}
                     </View>
                 </Touchable>
-                <Touchable style={styles.touchable}>
+                <Touchable style={styles.touchable} onPress={() => navigation.push("GeneticsData")}>
                     <View style={styles.view}>
                         <Text style={styles.optionText}> Genetics Data </Text>
                     {/* <Icon
