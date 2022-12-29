@@ -3,12 +3,14 @@ import React from 'react';
 
 import { View, Text, StyleSheet } from 'react-native';
 import BotNavbar from '../components/BotNavbar';
+import BarGraph from '../components/BarGraph';
 
 
 export default function Home({navigation}) {
     return (
         
       <View style={styles.container}>
+        <BarGraph/>
         <Text>Home</Text>
         <BotNavbar currPage={'home'}/>
         <StatusBar style="auto" />
