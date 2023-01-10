@@ -8,7 +8,7 @@ export default function Community({navigation}) {
     return (
       <View style={styles.container}>
         <Text>Community</Text>
-        <BotNavbar currPage={'community'}/>
+        {/* <BotNavbar currPage={'community'}/> */}
         <StatusBar style="auto" />
       </View>
   

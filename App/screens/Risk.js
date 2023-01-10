@@ -8,7 +8,7 @@ export default function Risk({navigation}) {
     return (
       <View style={styles.container}>
         <Text>Risk</Text>
-        <BotNavbar currPage={'risk'}/>
+        {/* <BotNavbar currPage={'risk'}/> */}
         <StatusBar style="auto" />
       </View>
   

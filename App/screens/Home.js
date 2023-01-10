@@ -12,7 +12,7 @@ export default function Home({navigation}) {
       <View style={styles.container}>
         <BarGraph/>
         <Text>Home</Text>
-        <BotNavbar currPage={'home'}/>
+        {/* <BotNavbar currPage={'home'}/> */}
         <StatusBar style="auto" />
       </View>
   
