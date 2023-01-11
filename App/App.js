@@ -10,8 +10,8 @@ import Genetics from './screens/Genetics';
 import Community from './screens/Community';
 import BotNavbar from './components/BotNavbar';
 import User from './screens/User';
-import HealthDetails from './screens/user-pages/HealthDetails';
 import GeneticsData from './screens/user-pages/GeneticsData';
+import UserDetails from './screens/user-pages/UserHealthDetails';
 
  
 const Stack = createNativeStackNavigator();
@@ -21,15 +21,15 @@ export default function App() {
     return (
         <NavigationContainer> 
           <Stack.Navigator screenOptions={{ animation: 'none' }}>
-            <Stack.Screen name="GeneticsData" component={GeneticsData} />
             <Stack.Screen name="Home" component={Home}  />
+            <Stack.Screen name="Genetics Data" component={GeneticsData} />
             <Stack.Screen name="User" component={User} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Signup" component={Signup}  />
             <Stack.Screen name="Genetics" component={Genetics} />
             <Stack.Screen name="Risk" component={Risk}  />
             <Stack.Screen name="Community" component={Community} />
-            <Stack.Screen name="HealthDetails" component={HealthDetails} />
+            <Stack.Screen name="User & Health Details" component={UserDetails} />
           </Stack.Navigator>
           {/* <BotNavbar /> */}
         </NavigationContainer>

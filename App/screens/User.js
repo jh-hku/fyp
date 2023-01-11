@@ -1,16 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-
 import { Button } from '@rneui/base'
-import { Container, Icon, ScreenContainer, Touchable, withTheme } from '@draftbit/ui';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, View, ScrollView, TouchableHighlight } from 'react-native';
 import BotNavbar from '../components/BotNavbar';
 
 export default function User({ navigation }) {
     return (
-        <ScreenContainer
+        <ScrollView
             style={styles.screenContainer}
-            scrollable={true}
             hasSafeArea={false}
         >
             <ImageBackground
@@ -18,7 +15,7 @@ export default function User({ navigation }) {
                 source={{uri: "https://i.pinimg.com/564x/b1/31/0a/b1310a301398dc8c87f59e5dc9b37f40.jpg"}}
                 // resizeMode="cover"
             />
-            <Container
+            <View
                 style={styles.container}
                 elevation={0}
                 useThemeGutterPadding={true}
@@ -35,11 +32,11 @@ export default function User({ navigation }) {
                 <Button title="Edit Profile" containerStyle={styles.editProfile} 
                     buttonStyle={{borderRadius: 40}}
                     type="outline" />
-            </Container>
-            <Container useThemeGutterPadding={true} elevation={0}>
-                <Touchable style={styles.touchableFirst} onPress={() => navigation.push("HealthDetails")} >
+            </View>
+            <View elevation={0} style={styles.optionContainer}>
+                <TouchableHighlight underlayColor='none' style={styles.touchableFirst} onPress={() => navigation.push("User & Health Details")} >
                     <View style={styles.view}>
-                        <Text style={styles.optionText}> Health Details </Text>
+                        <Text style={styles.optionText}> User & Health Details </Text>
                     {/* <Icon
                         style={styles.iconFE}
                         size={24}
@@ -47,8 +44,8 @@ export default function User({ navigation }) {
                         name="MaterialIcons/account-circle"
                     /> */}
                     </View>
-                </Touchable>
-                <Touchable style={styles.touchable} onPress={() => navigation.push("GeneticsData")}>
+                </TouchableHighlight>
+                <TouchableHighlight underlayColor='none' style={styles.touchable} onPress={() => navigation.push("Genetics Data")}>
                     <View style={styles.view}>
                         <Text style={styles.optionText}> Genetics Data </Text>
                     {/* <Icon
@@ -58,8 +55,8 @@ export default function User({ navigation }) {
                         size={24}
                     /> */}
                     </View>
-                </Touchable>
-                <Touchable style={styles.touchable}>
+                </TouchableHighlight>
+                <TouchableHighlight underlayColor='none' style={styles.touchable}>
                     <View style={styles.view}>
                         <Text style={styles.optionText}> Manage Fitbit </Text>
                     {/* <Icon
@@ -69,8 +66,8 @@ export default function User({ navigation }) {
                         name="MaterialIcons/history"
                     /> */}
                     </View>
-                </Touchable>
-                <Touchable style={styles.touchable}>
+                </TouchableHighlight>
+                <TouchableHighlight underlayColor='none' style={styles.touchable}>
                     <View style={styles.view}>
                         <Text style={styles.optionText}> Medical ID </Text>
                     {/* <Icon
@@ -80,12 +77,12 @@ export default function User({ navigation }) {
                         color={theme.colors.strong}
                     /> */}
                     </View>
-                </Touchable>
+                </TouchableHighlight>
 
                 <View style={styles.touchable}>
                     <Text></Text>
                 </View>
-                <Touchable style={styles.touchable}>
+                <TouchableHighlight underlayColor='none' style={styles.touchable}>
                     <View style={styles.view}>
                         <Text style={styles.signOutText}> Sign Out </Text>
                     {/* <Icon
@@ -95,10 +92,10 @@ export default function User({ navigation }) {
                         color={theme.colors.strong}
                     /> */}
                     </View>
-                </Touchable>
+                </TouchableHighlight>
                 <View style={styles.touchable}></View>
-            </Container>
-      </ScreenContainer>
+            </View>
+      </ScrollView>
   
     );
 }
@@ -112,6 +109,11 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         marginTop: -65,
+    },
+
+    optionContainer: {
+        paddingLeft: 20,
+        paddingRight: 20
     },
 
     containerSignOut: {
@@ -162,6 +164,7 @@ const styles = StyleSheet.create({
     view: {
         justifyContent: 'space-between',
         flexDirection: 'row',
+        paddingLeft: 5,
     },
 
     optionText: {

@@ -1,6 +1,5 @@
 import { Button } from '@rneui/base'
-import { Container, Icon, ScreenContainer, Touchable, withTheme } from '@draftbit/ui';
-import { Image, ImageBackground, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, View, ScrollView, TextInput, TouchableHighlight } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
 import { useState } from 'react';
 
@@ -32,23 +31,23 @@ export default function GeneticsData({ navigation: { goBack } }) {
     // }
 
     return (
-        <View
+        <ScrollView
             style={styles.screenContainer}
             scrollable={true}
             hasSafeArea={false}
         >
-            <Text>Genetics Data</Text>
-            <Container style={styles.container} >
+            {/* <Text>Genetics Data</Text> */}
+            <View style={styles.container} >
                 {/* ----- Age Option ------ */}
-                <Touchable style={styles.touchableFirst} >
+                <TouchableHighlight style={styles.touchableFirst} >
                     <View style={styles.optionView}>
                         <Text style={styles.optionText}> Age </Text>
                         <TextInput style={styles.valueText} onChangeText={setAgeValue} value={ageValue} />
                         {/* <Text style={styles.valueText}> 22 </Text> */}
                     </View>
-                </Touchable>
+                </TouchableHighlight>
                 {/* ----- Sex Option ------ */}
-                <Touchable style={styles.touchable} >
+                <TouchableHighlight style={styles.touchable} >
                     <View style={styles.optionView}>
                         <Text style={styles.optionText}> Sex </Text>
                         <Text style={styles.valueTextWithDropdown}> {sexValue} </Text>
@@ -65,24 +64,24 @@ export default function GeneticsData({ navigation: { goBack } }) {
                             }}
                         />
                     </View>
-                </Touchable>
+                </TouchableHighlight>
                 {/* ----- Height Option ------ */}
-                <Touchable style={styles.touchable} >
+                <TouchableHighlight style={styles.touchable} >
                     <View style={styles.optionView}>
                         <Text style={styles.optionText}> Height </Text>
                         <TextInput style={styles.valueText} onChangeText={setHeightValue} value={heightValue} />
                         {/* <Text style={styles.valueText}> 180 </Text> */}
                     </View>
-                </Touchable>
+                </TouchableHighlight>
                 {/* ----- Weight Option ------ */}
-                <Touchable style={styles.touchable} >
+                <TouchableHighlight style={styles.touchable} >
                     <View style={styles.optionView}>
                         <Text style={styles.optionText}> Weight </Text>
                         <TextInput style={styles.valueText} onChangeText={setWeightValue} value={weightValue} />
                     </View>
-                </Touchable>
+                </TouchableHighlight>
                 {/* ----- Blood Type Option ------ */}
-                <Touchable style={styles.touchable} >
+                <TouchableHighlight style={styles.touchable} >
                     <View style={styles.optionView}>
                         <Text style={styles.optionText}> Blood Type </Text>
                         <Text style={styles.valueTextWithDropdown}> {bloodtypeValue} </Text>
@@ -99,22 +98,22 @@ export default function GeneticsData({ navigation: { goBack } }) {
                             }}
                         />
                     </View>
-                </Touchable>
-            </Container>
+                </TouchableHighlight>
+            </View>
 
             <Text style={{color: 'grey', marginLeft: 35, marginRight: 35, marginTop: 20, marginBottom: 0, textAlign: 'justify'}}> 
                 BMI is calculated from the inputted height and weight above, make sure that the data inputted above is correct so that your BMI measurement is also accurate.
             </Text>
-            <Container style={styles.container} >
+            <View style={styles.container} >
                 {/* ----------- */}
-                <Touchable style={styles.touchableFirst} >
+                <TouchableHighlight style={styles.touchableFirst} >
                     <View style={styles.optionView}>
                         <Text style={styles.optionText}> BMI </Text>
                         <Text style={styles.valueText}> 24.5 </Text>
                     </View>
-                </Touchable>
-            </Container>
-        </View>
+                </TouchableHighlight>
+            </View>
+        </ScrollView>
     
       );
 }
@@ -123,7 +122,8 @@ const styles = StyleSheet.create({
     screenContainer: {
         backgroundColor: '#DDDDD',
         // alignItems: 'center',
-        height: '100%'
+        height: '100%',
+        paddingTop: 20,
         // marginTop: -65,
     },
 
@@ -135,8 +135,8 @@ const styles = StyleSheet.create({
         // marginTop: 10,
         marginLeft: 30,
         marginRight: 30,
-        paddingLeft: 10,
-        paddingRight: 10
+        paddingLeft: 20,
+        paddingRight: 20
     },
 
     touchableFirst: {
