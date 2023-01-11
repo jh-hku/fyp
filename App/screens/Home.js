@@ -4,12 +4,14 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Avatar } from '@rneui/themed';
 import BotNavbar from '../components/BotNavbar';
+import BarGraph from '../components/BarGraph';
 
 
 export default function Home({navigation}) {
     return (
         
       <View style={styles.container}>
+        <BarGraph/>
         <Text>Home</Text>
         <Avatar
             size={64}
@@ -19,7 +21,7 @@ export default function Home({navigation}) {
             onPress={() => navigation.push("User")}
             containerStyle={{ backgroundColor: '#6733b9' }}
         />
-        <BotNavbar currPage={'home'}/>
+        {/* <BotNavbar currPage={'home'}/> */}
         <StatusBar style="auto" />
       </View>
   
