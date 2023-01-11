@@ -8,7 +8,7 @@ export default function Genetics({navigation}) {
     return (
       <View style={styles.container}>
         <Text>Genetics</Text>
-        <BotNavbar currPage={'genetics'}/>
+        {/* <BotNavbar currPage={'genetics'}/> */}
         <StatusBar style="auto" />
       </View>
   

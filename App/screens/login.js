@@ -13,7 +13,7 @@ export default function Login({navigation}) {
       </View>
       
       <Button title="Login" buttonStyle={styles.button} 
-        onPress={() => navigation.replace("Home")}
+        onPress={() => navigation.replace("Main")}
       />
       <Button 
         title="Don't have an account? Signup today!" 
