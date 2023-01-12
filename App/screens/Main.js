@@ -8,7 +8,7 @@ import {  StyleSheet } from 'react-native';
 import { Icon } from '@rneui/base';
 
 
-const Main = () => {
+const Main = ({ navigation }) => {
     const [index, setIndex] = React.useState(0);
 
     const iconSize = 35;
@@ -17,16 +17,16 @@ const Main = () => {
         <>
             <TabView value={index} onChange={setIndex} disableSwipe={true} disableTransition={true}>
                 <TabView.Item style={{width: '100%'}}>
-                    <Home/>
+                    <Home navigation={navigation} />
                 </TabView.Item>
                 <TabView.Item style={{width: '100%'}}>
-                    <Genetics/>
+                    <Genetics navigation={navigation} />
                 </TabView.Item>
                 <TabView.Item style={{width: '100%'}}>
-                    <Risk/>
+                    <Risk navigation={navigation} />
                 </TabView.Item>
                 <TabView.Item style={{width: '100%'}}>
-                    <Community/>
+                    <Community navigation={navigation} />
                 </TabView.Item>
             </TabView>
 
