@@ -18,6 +18,7 @@
     "@rneui/themed": "^4.0.0-rc.7",
     "expo": "~46.0.16",
     "expo-status-bar": "~1.4.0",
+    "firebase": "^9.15.0",
     "react": "18.0.0",
     "react-native": "0.69.6",
     "react-native-element-dropdown": "^2.5.1",
